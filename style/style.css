@@ -5,18 +5,6 @@
 	src: url('../font/DS-DIGIB.ttf');
 }
 
-	/*Configuração de fundo da calculadora Branca*/
-
-div#calculadora{
-
-	border: 1px gray solid;
-	border-radius: 10px;
-	box-shadow: 0px 5px 15px 2px rgba(0,0,1000,0.3);
-	width:300px;
-	height: 400px;
-	background-image: linear-gradient(120deg, rgba(180,180,180,0.5),rgba(250,250,250,1),rgba(190,190,200,0.5), white);
-	user-select: none;
-}
 
 p.nameGamer{
 	position: relative;
@@ -25,7 +13,6 @@ p.nameGamer{
 	padding: 0px;
 	text-align: center;
 }
-
 p.exposedGamer{
 	margin-left: 0px;
 	margin-top: -15px;
@@ -36,12 +23,22 @@ p.exposedGamer{
 
 }
 
-	/*Configuração do Visor*/
-
-#visor{
+/*Neste bloco estão configuradas as cores do tema White*/
+/*Cores do corpo da calculadora*/
+div#calculadora.white{
+	border: 1px gray solid;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px 2px rgba(0,0,1000,0.3);
+	width:300px;
+	height: 400px;
+	background-image: linear-gradient(120deg, rgba(180,180,180,0.5),rgba(250,250,250,1),rgba(190,190,200,0.5), white);
+	user-select: none;
+}
+/*Configuração do Visor*/
+div#calculadora.white #visor{
 	padding: 5px;
 	position:relative;
-	left:4px;
+	left:8.5px;
 	top: 15px;
 	width: 270px;
 	height: 95px;
@@ -54,14 +51,11 @@ p.exposedGamer{
 	outline: none;
 	cursor: default;
 }
-#visor:active{
+div#calculadora.white #visor:active{
 	outline: none;
 }
-
-input{
-
-	/*Configurações do botão*/
-
+div#calculadora.white input.skin{
+/*Configurações do botão*/
 	width:45px;
 	height:35px;
 	position:relative;
@@ -75,9 +69,7 @@ input{
 	transition:box-shadow 1px 1px 2px rgba(0,0,0,.5) 1s;
 	outline: none;
 	cursor: pointer;
-
-	/*Configuração da fonte*/
-
+/*Configuração da fonte*/
 	font-family: 'Orbitrom';
 	font-style: italic;
 	text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
@@ -86,15 +78,268 @@ input{
 	color: #505050;
 	transition: color 0.1s, box-shadow 0.2s;
 }
-
-.skin{
-	font-size:13px;
-}
-
-input:active{
+/*Iluminação de botão ao ser pressionado*/
+div#calculadora.white input.skin:active{
 	box-shadow: 0px 0px 5px rgba(0,255,255,1);
 	color: rgba(0,255,255,1);
 	outline: none;
 	border: 0;
-	/*background: linear-gradient(0deg, rgb(51, 51, 51) 4%, rgb(124, 124, 124) 52%, rgb(51, 51, 51) 30%, #000000);*/
+}
+
+/*Neste bloco estão configuradas as cores do tema Black*/
+/*Cores do corpo da calculadora*/
+div#calculadora.black{
+	border: 1px gray solid;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px 2px rgba(0,0,1000,0.3);
+	width:300px;
+	height: 400px;
+	background-image: linear-gradient(120deg, rgba(10, 10, 10, 0.781),rgb(41, 41, 41),rgba(20, 20, 20, 0.767), black);
+	user-select: none;
+}
+/*Configuração do Visor*/
+div#calculadora.black #visor{
+	padding: 5px;
+	position:relative;
+	left:8.5px;
+	top: 15px;
+	width: 270px;
+	height: 95px;
+	background: rgb(144, 180, 247);
+	box-shadow: 0px 0px 30px rgb(61, 93, 153) inset;
+	color: black;
+	font-family: 'Digital';
+	font-size: 30px;
+	text-align: right;
+	outline: none;
+	cursor: default;
+}
+div#calculadora.black #visor:active{
+	outline: none;
+}
+div#calculadora.black input.skin{
+/*Configurações do botão*/
+	width:45px;
+	height:35px;
+	position:relative;
+	left: 4px;
+	top:-25px;
+	margin-bottom: auto;
+	padding: 0px 0px 0px 0px;
+	border-color: #707070;
+	border-radius: 5px;
+	background: linear-gradient(0deg, rgb(12, 12, 12) 4%, rgb(50, 50, 50) 52%, rgb(65, 65, 65) 30%, rgb(148, 147, 147));
+	margin: 5px;
+	transition:box-shadow 1px 1px 2px rgba(0,0,0,.5) 1s;
+	outline: none;
+	cursor: pointer;
+/*Configuração da fonte*/
+	font-family: 'Orbitrom';
+	font-style: italic;
+	text-shadow: 0px -1px 0px rgba(97, 97, 97, 0.39);
+	font-size: 23px;
+	text-align: center;
+	color:  rgba(216, 216, 216, 0.637);
+	transition: color 0.1s, box-shadow 0.2s;
+}
+/*Iluminação de botão ao ser pressionado*/
+div#calculadora.black input.skin:active{
+	box-shadow: 0px 0px 15px rgb(155, 207, 255);
+	color: rgb(182, 220, 255);
+	text-shadow: 0px -1px 0px rgb(80, 159, 248);
+	outline: none;
+	border: 0;
+}
+/*Neste bloco estão configuradas as cores do tema Red*/
+/*Cores do corpo da calculadora*/
+div#calculadora.red{
+	border: 1px rgb(56, 8, 8) solid;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px 2px rgba(180, 14, 20, 0.438);
+	width:300px;
+	height: 400px;
+	background-image: linear-gradient(120deg, rgb(59, 18, 18),rgb(94, 17, 17),rgb(146, 61, 61), rgb(73, 5, 5));
+	user-select: none;
+}
+/*Configuração do Visor*/
+div#calculadora.red #visor{
+	padding: 5px;
+	position:relative;
+	left:8.5px;
+	top: 15px;
+	width: 270px;
+	height: 95px;
+	background: rgb(218, 204, 238);
+	box-shadow: 0px 0px 30px rgb(99, 73, 122) inset;
+	color: rgb(0, 0, 0);
+	font-family: 'Digital';
+	font-size: 30px;
+	text-align: right;
+	outline: none;
+	cursor: default;
+}
+div#calculadora.red #visor:active{
+	outline: none;
+}
+div#calculadora.red input.skin{
+/*Configurações do botão*/
+	width:45px;
+	height:35px;
+	position:relative;
+	left: 4px;
+	top:-25px;
+	margin-bottom: auto;
+	padding: 0px 0px 0px 0px;
+	border-color: #4d1010;
+	border-radius: 5px;
+	background: linear-gradient(0deg, rgb(37, 16, 16) 4%, rgb(58, 17, 17) 52%, rgb(94, 34, 34) 30%, rgb(133, 117, 117));
+	margin: 5px;
+	transition:box-shadow 1px 1px 2px rgba(0,0,0,.5) 1s;
+	outline: none;
+	cursor: pointer;
+/*Configuração da fonte*/
+	font-family: 'Orbitrom';
+	font-style: italic;
+	text-shadow: 0px -1px 0px rgba(151, 151, 151, 0.39);
+	font-size: 23px;
+	text-align: center;
+	color:  rgba(216, 216, 216, 0.637);
+	transition: color 0.1s, box-shadow 0.2s;
+}
+/*Iluminação de botão ao ser pressionado*/
+div#calculadora.red input.skin:active{
+	box-shadow: 0px 0px 15px rgb(250, 97, 97);
+	color: rgb(255, 182, 182);
+	text-shadow: 0px -1px 0px rgb(228, 46, 46);
+	outline: none;
+	border: 0;
+}
+/*Neste bloco estão configuradas as cores do tema Green*/
+/*Cores do corpo da calculadora*/
+div#calculadora.green{
+	border: 1px rgb(8, 56, 8) solid;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px 2px rgba(0, 250, 62, 0.3);
+	width:300px;
+	height: 400px;
+	background-image: linear-gradient(120deg, rgb(18, 59, 20),rgb(17, 94, 17),rgb(61, 146, 72), rgb(5, 73, 11));
+	user-select: none;
+}
+/*Configuração do Visor*/
+div#calculadora.green #visor{
+	padding: 5px;
+	position:relative;
+	left:8.5px;
+	top: 15px;
+	width: 270px;
+	height: 95px;
+	background: rgb(248, 246, 222);
+	box-shadow: 0px 0px 30px rgb(178, 180, 42) inset;
+	color: rgb(0, 0, 0);
+	font-family: 'Digital';
+	font-size: 30px;
+	text-align: right;
+	outline: none;
+	cursor: default;
+}
+div#calculadora.green #visor:active{
+	outline: none;
+}
+div#calculadora.green input.skin{
+/*Configurações do botão*/
+	width:45px;
+	height:35px;
+	position:relative;
+	left: 4px;
+	top:-25px;
+	margin-bottom: auto;
+	padding: 0px 0px 0px 0px;
+	border-color: #104d1d;
+	border-radius: 5px;
+	background: linear-gradient(0deg, rgb(16, 37, 19) 4%, rgb(17, 58, 26) 52%, rgb(44, 94, 34) 30%, rgb(102, 138, 113));
+	margin: 5px;
+	transition:box-shadow 1px 1px 2px rgba(0,0,0,.5) 1s;
+	outline: none;
+	cursor: pointer;
+/*Configuração da fonte*/
+	font-family: 'Orbitrom';
+	font-style: italic;
+	text-shadow: 0px -1px 0px rgba(151, 151, 151, 0.39);
+	font-size: 23px;
+	text-align: center;
+	color:  rgba(180, 211, 172, 0.637);
+	transition: color 0.1s, box-shadow 0.2s;
+}
+/*Iluminação de botão ao ser pressionado*/
+div#calculadora.green input.skin:active{
+	box-shadow: 0px 0px 15px rgb(97, 250, 105);
+	color: rgb(182, 255, 188);
+	text-shadow: 0px -1px 0px rgb(46, 228, 101);
+	outline: none;
+	border: 0;
+}
+/*Neste bloco estão configuradas as cores do tema Orange*/
+/*Cores do corpo da calculadora*/
+div#calculadora.orange{
+	border: 1px rgb(56, 27, 8) solid;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px 2px rgba(185, 73, 9, 0.61);
+	width:300px;
+	height: 400px;
+	background-image: linear-gradient(120deg, rgb(102, 37, 12),rgb(94, 41, 17),rgb(165, 70, 15), rgb(73, 32, 5));
+	user-select: none;
+}
+/*Configuração do Visor*/
+div#calculadora.orange #visor{
+	padding: 5px;
+	position:relative;
+	left:8.5px;
+	top: 15px;
+	width: 270px;
+	height: 95px;
+	background: rgb(236, 174, 123);
+	box-shadow: 0px 0px 30px rgb(165, 91, 48) inset;
+	color: rgb(0, 0, 0);
+	font-family: 'Digital';
+	font-size: 30px;
+	text-align: right;
+	outline: none;
+	cursor: default;
+	box-shadow: rgb(94, 17, 17);
+}
+div#calculadora.orange #visor:active{
+	outline: none;
+}
+div#calculadora.orange input.skin{
+/*Configurações do botão*/
+	width:45px;
+	height:35px;
+	position:relative;
+	left: 4px;
+	top:-25px;
+	margin-bottom: auto;
+	padding: 0px 0px 0px 0px;
+	border-color: #4d2110;
+	border-radius: 5px;
+	background: linear-gradient(0deg, rgb(61, 21, 6) 4%, rgb(58, 32, 17) 52%, rgb(97, 45, 30) 30%, rgb(139, 117, 108));
+	margin: 5px;
+	transition:box-shadow 1px 1px 2px rgba(0,0,0,.5) 1s;
+	outline: none;
+	cursor: pointer;
+/*Configuração da fonte*/
+	font-family: 'Orbitrom';
+	font-style: italic;
+	text-shadow: 0px -1px 0px rgba(151, 151, 151, 0.39);
+	font-size: 23px;
+	text-align: center;
+	color:  rgba(211, 186, 172, 0.637);
+	transition: color 0.1s, box-shadow 0.2s;
+}
+/*Iluminação de botão ao ser pressionado*/
+div#calculadora.orange input.skin:active{
+	box-shadow: 0px 0px 15px rgb(250, 145, 97);
+	color: rgb(255, 221, 182);
+	text-shadow: 0px -1px 0px rgb(228, 113, 46);
+	outline: none;
+	border: 0;
 }
