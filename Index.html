@@ -9,12 +9,12 @@
 	<h1>Calculadora</h1>
 	<div id="calculadora" class="white">
 		<div>
-			<input type="text" name="visor" id="visor" size="12" maxlenght="12" placeholder="0" readonly="true">
+			<input type="text" name="visor" id="visor" size="12" maxlenght="12" value=0 readonly="true">
 		</div>
 		<div id = 'teclado'>
-			<form name="calc">
-				<p class="nameGamer">Super Calculator Overclocked 3000</p>
-				<p class="exposedGamer">Gamer</p>
+			<form name="calc" onkeypress='digitar( value )'>
+				<p class="nameGamer">Calculadora Simples didática</p>
+				<p class="exposedGamer">Versão 1</p>
 				<input onclick = 'changeSkinWhite()' type="button" class="skin" value="White" style="font-size: 13px;"/></input>
 				<input onclick = 'changeSkinBlack()' type="button" class="skin" value="Black" style="font-size: 13px;"></input>
 				<input onclick = 'changeSkinRGB()' type="button" class="skin" value="Red" style="font-size: 13px;"></input>
@@ -28,18 +28,18 @@
 				<input type="button" class="skin" value="4" onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="5" onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="6" onclick="digitar( value )"></input>
-				<input type="button" class="skin" value="+" onclick="atribuirSoma( value )"></input>
-				<input type="button" class="skin" value="-" onclick="digitar( value )"></input>
+				<input onclick ='soma()' type="button" class="skin" value="+"></input>
+				<input onclick ='subtrair()' type="button" class="skin" value="-" ></input>
 				<input type="button" class="skin" value="1" onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="2" onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="3" onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="÷" onclick="digitar( value )"></input>
-				<input type="button" class="skin" value="x" onclick="digitar( value )"></input>
+				<input onclick='multiplicar()' type="button" class="skin" value="x"></input>
 				<input type="button" class="skin" value="0" onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="," onclick="digitar( value )"></input>
 				<input type="button" class="skin" value="( )"></input>
 				<input type="button" class="skin" value="%" onclick="digitar( value )"></input>
-				<input type="button" class="skin" value="="></input>
+				<input onclick = 'igual()' type="button" class="skin" value="="></input>
 			</form>
 		</div>
 	</div>
