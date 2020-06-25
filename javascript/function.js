@@ -15,15 +15,6 @@ var equacao = 0;
 var valor1 = 0;
 var valor2 = 0;
 
-function piscar(){
-	/*window.document.getElementById('visor').style.color='red';*/
-	setTimeout(window.document.getElementById('visor').style.opacity='0',50000);
-
-
-	
-	
-}
-
 function digitar(num){
 	//inserir os valores precionados no visor
 	var atual = visor.value;
@@ -151,21 +142,27 @@ function mudarClasse(elemento, classeNova){
 function changeSkinWhite(){
 	calculadora = document.getElementById('calculadora')
 	mudarClasse(calculadora, 'white')
+	document.getElementById('container').style.backgroundImage = 'linear-gradient(120deg, gray, white, gray)'
+	document.getElementById('container').style.webkitTransition = 0.5;
 }
 function changeSkinBlack(){
 	calculadora = document.getElementById('calculadora')
 	mudarClasse(calculadora, 'black')
+	document.getElementById('container').style.backgroundImage = 'linear-gradient(120deg, black, rgb(80, 80, 80), black)'
 }
 function changeSkinRGB(){
 	calculadora = document.getElementById('calculadora')
 	mudarClasse(calculadora, 'red')
+	document.getElementById('container').style.backgroundImage = 'linear-gradient(120deg, black, rgb(128, 0, 0), black)'
 }
 function changeSkinGreen(){
 	calculadora = document.getElementById('calculadora')
 	mudarClasse(calculadora, 'green')
+	document.getElementById('container').style.backgroundImage = 'linear-gradient(120deg, black, rgb(0, 128, 0), black)'
 }
 function changeSkinOrange(){
 	calculadora = document.getElementById('calculadora')
 	mudarClasse(calculadora, 'orange')
+	document.getElementById('container').style.backgroundImage = 'linear-gradient(120deg, black, rgb(220, 100, 0), black)'
 }
 

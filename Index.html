@@ -6,15 +6,18 @@
 <script language="javascript" src="javascript/function.js"></script>
 </head>
 <body>
-	<h1>Calculadora</h1>
+	
+	<main id="container">
+	<div id = "containerCalc" class="pulse"></div>
+	
 	<div id="calculadora" class="white">
 		<div>
 			<input type="text" name="visor" id="visor" size="12" maxlenght="12" value=0 readonly="true">
 		</div>
 		<div id = 'teclado'>
 			<form name="calc" onkeypress='digitar( value )'>
-				<p class="nameGamer">Calculadora Simples didática</p>
-				<p class="exposedGamer">Versão 1</p>
+				<p class="nomeprojeto">Calculadora Simples didática</p>
+				<p class="numversao">Versão 1</p>
 				<input onclick = 'changeSkinWhite()' type="button" class="skin" value="White" style="font-size: 13px;"/></input>
 				<input onclick = 'changeSkinBlack()' type="button" class="skin" value="Black" style="font-size: 13px;"></input>
 				<input onclick = 'changeSkinRGB()' type="button" class="skin" value="Red" style="font-size: 13px;"></input>
@@ -42,7 +45,7 @@
 				<input onclick = 'igual()' type="button" class="skin" value="="></input>
 			</form>
 		</div>
-	</div>
+	</main>
 	<footer>
 	</footer>
 </body>
