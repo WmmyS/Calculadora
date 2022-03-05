@@ -143,7 +143,7 @@ function changeSkinWhite(){
 	calculadora = document.getElementById('calculadora')
 	mudarClasse(calculadora, 'white')
 	document.getElementById('container').style.backgroundImage = 'linear-gradient(120deg, gray, white, gray)'
-	document.getElementById('container').style.webkitTransition = 0.5;
+	document.getElementById('container').style.transition = 0.5;
 }
 function changeSkinBlack(){
 	calculadora = document.getElementById('calculadora')
