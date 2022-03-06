@@ -15,32 +15,32 @@
 				<p class="nomeprojeto">Calculadora Simples didática</p>
 				<p class="numversao">Versão 2.0</p>
 				<div id = 'teclado'>
-					<form name="calc" onkeypress='digitar( value )'>
+					<form name="calc">
 						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="white" style="font-size: 13px;"/></input>
 						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="black" style="font-size: 13px;"></input>
 						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="red" style="font-size: 13px;"></input>
 						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="green" style="font-size: 13px;"></input>
 						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="orange" style="font-size: 13px;"></input>
-						<input type="button" class="skin number" value="7"  ></input>
-						<input type="button" class="skin number" value="8"  ></input>
-						<input type="button" class="skin number" value="9"  ></input>
-						<input type="button" class="skin number" value="CE" ></input>
-						<input type="button" class="skin number" value="C"  ></input>
-						<input type="button" class="skin number" value="4"  ></input>
-						<input type="button" class="skin number" value="5"  ></input>
-						<input type="button" class="skin number" value="6"  ></input>
-						<input type="button" class="skin number" value="+"  ></input>
-						<input type="button" class="skin number" value="-"  ></input>
-						<input type="button" class="skin number" value="1"  ></input>
-						<input type="button" class="skin number" value="2"  ></input>
-						<input type="button" class="skin number" value="3"  ></input>
-						<input type="button" class="skin number" value="÷"  ></input>
-						<input type="button" class="skin number" value="*" style="font-style:normal"  ></input>
-						<input type="button" class="skin number" value="0"  ></input>
-						<input type="button" class="skin number" value=","  ></input>
-						<input type="button" class="skin number" value="( )"></input>
-						<input type="button" class="skin number" value="%"  ></input>
-						<input type="button" class="skin number" value="="  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="7"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="8"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="9"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="CE" ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="<"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="4"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="5"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="6"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="+"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="-"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="1"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="2"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="3"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="÷"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="*" style="font-style:normal"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="0"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value=","  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="( )"></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="%"  ></input>
+						<input onclick= 'calculadora.insereValor(this.value)' type="button" class="skin btn-num" value="="  ></input>
 					</form>
 				</div>
 			</div>

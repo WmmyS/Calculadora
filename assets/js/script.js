@@ -12,24 +12,86 @@ const calculadora = {
 	display: document.querySelector('#visor'),
 	skin: document.getElementById('calculadora').classList,
 	background: document.getElementById('container'),
+	finalizouConta: false,
 	
 	iniciar() {
 		alert('Calculadora Iniciada')
+		this.pressionaEnter();
 	},
 
-	cliqueBotoes() {
-		document.addEventListener('click', function (evento) {
-			const elemento = evento.target;
-			if (elemento.classList('number')) {
-				console.log('deu certo')
-			}
-		})
+	clearDisplay() {
+		this.display.value = '0';
+	},
+
+	apagaUm() {
+		this.display.value = this.display.value.slice(0, -2);
+		if (this.display.value == '') {
+			this.clearDisplay();
+		}
+	},
+
+	limite() {
+		if (this.display.value.length == 17){
+			return true;
+		}
 	},
 
 	mudarSkin(valor){
 		this.skin.forEach(data => this.skin.remove(data));
 		this.skin.add(valor);		
-		mudafundo(valor, this.background);
+		mudarfundo(valor, this.background);
+	},
+
+	realizaConta() {
+		let conta = this.display.value;
+		try {
+			conta = eval(conta);
+			if (conta == isNaN) {
+				console.log(conta);
+				alert('Conta Inválida')
+				return '0'
+			} else {
+				this.finalizouConta = true;
+				return conta;
+			}
+		} catch(error) {
+			alert('Conta Inválida')
+			return '0'
+		}
+	},
+
+	insereValor(valor) {
+
+		console.log(valor);
+
+		valor = valor.replace('÷', '/');
+		valor = valor.replace(',', '.');
+
+		if (this.finalizouConta) {
+			this.clearDisplay();
+			this.finalizouConta = false;
+		}
+
+		if (valor === '=') {
+			console.log(this.display.value);
+			valor = this.realizaConta();
+			this.display.value = valor;
+		}
+		if (!this.finalizouConta) {
+			if( this.display.value == '0' ) {
+				this.display.value = valor;
+			} else {
+				if (!this.limite()) {
+					this.display.value += valor;
+				}
+			}
+		}
+		if (valor === 'CE') {
+			this.clearDisplay();
+		}
+		if (valor === '<') {
+			this.apagaUm();			
+		}
 	}
 }
 
@@ -47,7 +109,7 @@ function changeSkin(valor){
  * Define u plano de fundo pré-definido à página de acordo com o tema de skin escolhido.
  * @param {String} key 
  */
-function mudafundo(key, background) {
+function mudarfundo(key, background) {
 	switch (key) {
 		case 'white':
 			background.style
