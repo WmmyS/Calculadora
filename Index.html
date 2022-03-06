@@ -6,7 +6,6 @@
 
 </head>
 <body>
-	
 	<main id="container">
 		<div id = "containerCalc" >
 			<div id="calculadora" class="white">
@@ -17,37 +16,36 @@
 				<p class="numversao">Versão 2.0</p>
 				<div id = 'teclado'>
 					<form name="calc" onkeypress='digitar( value )'>
-						<input onclick = 'changeSkinWhite()' type="button" class="skin" value="White" style="font-size: 13px;"/></input>
-						<input onclick = 'changeSkinBlack()' type="button" class="skin" value="Black" style="font-size: 13px;"></input>
-						<input onclick = 'changeSkinRGB()' type="button" class="skin" value="Red" style="font-size: 13px;"></input>
-						<input onclick = 'changeSkinGreen()' type="button" class="skin" value="Green" style="font-size: 13px;"></input>
-						<input onclick = 'changeSkinOrange()' type="button" class="skin" value="Orange" style="font-size: 13px;"></input>
-						<input type="button" class="skin" value="7" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="8" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="9" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="CE"onclick="resetar( value )"></input>
-						<input type="button" class="skin" value="C" onclick="zerar( value )"></input>
-						<input type="button" class="skin" value="4" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="5" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="6" onclick="digitar( value )"></input>
-						<input onclick ='soma()' type="button" class="skin" value="+"></input>
-						<input onclick ='subtrair()' type="button" class="skin" value="-" ></input>
-						<input type="button" class="skin" value="1" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="2" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="3" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="÷" onclick="digitar( value )"></input>
-						<input onclick='multiplicar()' type="button" class="skin" value="*"></input>
-						<input type="button" class="skin" value="0" onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="," onclick="digitar( value )"></input>
-						<input type="button" class="skin" value="( )"></input>
-						<input type="button" class="skin" value="%" onclick="digitar( value )"></input>
-						<input onclick = 'igual()' type="button" class="skin" value="="></input>
+						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="white" style="font-size: 13px;"/></input>
+						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="black" style="font-size: 13px;"></input>
+						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="red" style="font-size: 13px;"></input>
+						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="green" style="font-size: 13px;"></input>
+						<input onclick = 'changeSkin(this.value)' type="button" class="skin" value="orange" style="font-size: 13px;"></input>
+						<input type="button" class="skin number" value="7"  ></input>
+						<input type="button" class="skin number" value="8"  ></input>
+						<input type="button" class="skin number" value="9"  ></input>
+						<input type="button" class="skin number" value="CE" ></input>
+						<input type="button" class="skin number" value="C"  ></input>
+						<input type="button" class="skin number" value="4"  ></input>
+						<input type="button" class="skin number" value="5"  ></input>
+						<input type="button" class="skin number" value="6"  ></input>
+						<input type="button" class="skin number" value="+"  ></input>
+						<input type="button" class="skin number" value="-"  ></input>
+						<input type="button" class="skin number" value="1"  ></input>
+						<input type="button" class="skin number" value="2"  ></input>
+						<input type="button" class="skin number" value="3"  ></input>
+						<input type="button" class="skin number" value="÷"  ></input>
+						<input type="button" class="skin number" value="*" style="font-style:normal"  ></input>
+						<input type="button" class="skin number" value="0"  ></input>
+						<input type="button" class="skin number" value=","  ></input>
+						<input type="button" class="skin number" value="( )"></input>
+						<input type="button" class="skin number" value="%"  ></input>
+						<input type="button" class="skin number" value="="  ></input>
 					</form>
 				</div>
 			</div>
 		</div>
 	</main>
-
 	<footer>
 	</footer>
 	<script language="javascript" src="assets/js/script.js"></script>
